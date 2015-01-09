@@ -6,7 +6,7 @@
 * @license      http://creativecommons.org/licenses/by-nc/3.0/ CC BY-NC 3.0
 * @copyright    2015
 * @since        File available since 5.0
-* @category     category pages
+* @category     category Berita
 */
 
 @include ("../../../l0t/render.php");
@@ -27,22 +27,22 @@ require_once(c_THEMES."auth.php");
 $SCRIPT_FOOT = "
 <script>
 $(document).ready(function(){
-	$('nav li.nav-cat').addClass('nav-expanded nav-active');
-	$('nav li.pk').addClass('nav-active');
+	$('nav li.nav2').addClass('nav-expanded nav-active');
+	$('nav li.bc').addClass('nav-active');
 });
 </script>
 <script src=\"cat.js\"></script>
 ";
 
-include "../pages-function.php";
+include "cat-function.php";
 ?>
 <section role="main" class="content-body">
 <header class="page-header">
-	<h2>Kategori Pages</h2>
+	<h2>Kategori Berita</h2>
 	<div class="right-wrapper pull-right">
 		<ol class="breadcrumbs">
 			<li><a href="<?php echo c_LANDING;?>"><i class="fa fa-home"></i></a></li>
-			<li><a href="../"><span>Pages</span></a></li>
+			<li><a href="../"><span>Berita</span></a></li>
 			<li><span>Kategori</span></li>
 		</ol>
 		<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
@@ -62,7 +62,7 @@ include "../pages-function.php";
 					<div class="panel-actions">
 						<a href="#" class="fa fa-caret-down"></a>
 					</div>
-					<h2 class="panel-title">Kategori Pages</h2>
+					<h2 class="panel-title">Kategori Berita</h2>
 				</header>
 				
 				<div class="panel-body">
@@ -78,7 +78,7 @@ include "../pages-function.php";
 							</thead>
 							<tbody id="isi_table">
 							<?php
-							$sql -> db_Select("taxonomy", "*", "WHERE `c_parent_ID`='0' AND `type`='3'");
+							$sql -> db_Select("taxonomy", "*", "WHERE `c_parent_ID`='0' AND `type`='1'");
 							while ($row = $sql-> db_Fetch()) {
 							    echo "
 							    <tr>
@@ -132,9 +132,9 @@ include "../pages-function.php";
 			</section>
 			<section>
 				<blockquote>
-					<p>Menghapus Kategori tidak akan menghapus artikel pages didalamnya. Melainkan Artikel pages akan di alihkan kedalam kelompok Uncategories.
+					<p>Menghapus Kategori tidak akan menghapus artikel Berita didalamnya. Melainkan Artikel Berita akan di alihkan kedalam kelompok Uncategories.
 					</p>
-					<small>Delete Kategori, <cite title="Pages">Pages</cite></small>
+					<small>Delete Kategori, <cite title="Berita">Berita</cite></small>
 				</blockquote>
 			</section>
 		</div>
@@ -163,7 +163,7 @@ include "../pages-function.php";
 							<select name="c_parent_ID" id="c_parent_ID" class="form-control mb-md">
 								<option value="0">(none)</option>
 								<?php
-					              $sql -> db_Select("taxonomy", "T_ID, c_name", "WHERE `c_parent_ID`='0' AND `type`='3' GROUP BY T_ID");
+					              $sql -> db_Select("taxonomy", "T_ID, c_name", "WHERE `c_parent_ID`='0' AND `type`='1' GROUP BY T_ID");
 					              while($row = $sql-> db_Fetch()){
 					                echo "<option value=\"{$row['T_ID']}\">{$row['c_name']}</option>\n";
 					                SELECT_CHILD($row['T_ID'], 1);

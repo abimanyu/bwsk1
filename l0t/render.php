@@ -32,7 +32,7 @@ $_SERVER['QUERY_STRING'] = c_QUERY;
 
 include ("l0t.php");
 include ("define.php");
-define("c_SELF", ($SITE_CONF_AUTOLOAD['ssl'] ? "https://".$_SERVER['HTTP_HOST'].($_SERVER['PHP_SELF'] ? $_SERVER['PHP_SELF'] : $_SERVER['SCRIPT_FILENAME']) : "http://".$_SERVER['HTTP_HOST'].($_SERVER['PHP_SELF'] ? $_SERVER['PHP_SELF'] : $_SERVER['SCRIPT_FILENAME'])));
+define("c_SELF", str_replace(c_URL."/", c_URL, ($SITE_CONF_AUTOLOAD['ssl'] ? "https://".$_SERVER['HTTP_HOST'].($_SERVER['PHP_SELF'] ? $_SERVER['PHP_SELF'] : $_SERVER['SCRIPT_FILENAME']) : "http://".$_SERVER['HTTP_HOST'].($_SERVER['PHP_SELF'] ? $_SERVER['PHP_SELF'] : $_SERVER['SCRIPT_FILENAME']))));
 define("c_XELF", substr(c_SELF, 0, -4));
 if(!$mySQLserver){
     include("db_class.php");

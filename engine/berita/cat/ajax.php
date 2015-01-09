@@ -10,14 +10,15 @@
 */
 
 @include ("../../../l0t/render.php");
-require_once("../pages-function.php");
+require_once("cat-function.php");
+
 
 //Form add cat
 if(trim(strip_tags($_GET['ac'])) == "add_cat") {
 	if (!empty($_POST['c_name'])) {
 		$rw = createSlugDB($_POST['c_name'], "taxonomy");
-		$sql -> db_Insert("taxonomy", "'', '3', '".$rw."', '".$_POST['c_name']."', '".$_POST['c_parent_ID']."', '' ");
-		$sql -> db_Select("taxonomy", "*", "WHERE `c_parent_ID`='0' AND `type`='3'");
+		$sql -> db_Insert("taxonomy", "'', '1', '".$rw."', '".$_POST['c_name']."', '".$_POST['c_parent_ID']."', '' ");
+		$sql -> db_Select("taxonomy", "*", "WHERE `c_parent_ID`='0' AND `type`='1'");
 		while ($row = $sql-> db_Fetch()) {
 		    echo "
 		    <tr>
@@ -37,7 +38,7 @@ if(trim(strip_tags($_GET['ac'])) == "add_cat") {
 if(trim(strip_tags($_GET['ac'])) == "del_cat") {
 	if (!empty($_GET['id'])) {
 		$sql -> db_Delete("taxonomy", "T_ID='".$_GET['id']."'");
-		$sql -> db_Select("taxonomy", "*", "WHERE `c_parent_ID`='0' AND `type`='3'");
+		$sql -> db_Select("taxonomy", "*", "WHERE `c_parent_ID`='0' AND `type`='1'");
 		while ($row = $sql-> db_Fetch()) {
 		    echo "
 		    <tr>

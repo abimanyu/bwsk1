@@ -222,4 +222,21 @@ function TEXTAREA( $str ) {
     $b = array('<br />','<br />');
     return str_replace($a, $b, $str);
 }
+
+/**
+Get Count
+*/
+function GET_COUNT($table, $coloumn, $ident=""){
+    $sql2 = new db;
+
+    if(empty($ident)) {
+        $sql2 -> db_Select($table, $coloumn);
+    }
+    else {
+        $sql2 -> db_Select($table, $coloumn, $ident);
+    }
+
+    if ( $sql2->db_Rows() ) { return $sql2->db_Rows();}
+    else {return 0;}
+}
 ?>

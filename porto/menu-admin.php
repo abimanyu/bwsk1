@@ -26,14 +26,14 @@ echo "
 <li class=\"landing\"><a href=\"".c_LANDING."\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i><span>Dashboard</span></a></li>
 <li class=\"nav-parent nav1\"><a href=\"#\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i><span>Berita</span></a>
     <ul class=\"nav nav-children\">
-        <li class=\"fk\"><a href=\"#\">Berita</a></li>
-        <li class=\"rt\"><a href=\"#\">Tambah Berita</a></li>
+        <li class=\"bd\"><a href=\"".c_URL.$ModuleDir."berita/\">Berita</a></li>
+        <li class=\"ba\"><a href=\"".c_URL.$ModuleDir."berita/add\">Tambah Berita</a></li>
     </ul>
 </li>
 <li class=\"nav-parent nav2\"><a href=\"#\"><i class=\"fa fa-tags\" aria-hidden=\"true\"></i><span>Kategori &amp; Tags</span></a>
     <ul class=\"nav nav-children\">
-        <li class=\"fk\"><a href=\"#\">Kategori</a></li>
-        <li class=\"rt\"><a href=\"#\">Tags</a></li>
+        <li class=\"bc\"><a href=\"".c_URL.$ModuleDir."berita/cat/\">Kategori</a></li>
+        <li class=\"bt\"><a href=\"".c_URL.$ModuleDir."berita/tag/\">Tags</a></li>
     </ul>
 </li>
 <li class=\"nav-parent nav3\"><a href=\"#\"><i class=\"fa fa-database\" aria-hidden=\"true\"></i><span>Database</span></a>

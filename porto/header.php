@@ -17,7 +17,7 @@ echo "
 <header class=\"header\">
     <div class=\"logo-container\">
         <a href=\"".c_LANDING."\" class=\"logo\">
-            <img src=\"".IMAGES."logo.png\" height=\"35\" alt=\"".c_APP." Admin\" />
+             <img src=\"".IMAGES."logo.png\" height=\"35\" alt=\"".c_APP." Admin\" />
         </a>
         <div class=\"visible-xs toggle-sidebar-left\" data-toggle-class=\"sidebar-left-opened\" data-target=\"html\" data-fire-event=\"sidebar-left-opened\">
             <i class=\"fa fa-bars\" aria-label=\"Toggle sidebar\"></i>

@@ -99,8 +99,8 @@ $teks .= "
 <body>
 <section class=\"body-sign\">
 	<div class=\"center-sign\">
-		<a href=\"".c_LANDING."\" class=\"logo pull-left\">
-			<img src=\"".IMAGES."logo.png\" height=\"54\" alt=\"".c_APP." Admin\" />
+		<a href=\"".c_LANDING."\" class=\"logo pull-left\" style=\"padding-top:20px;\">
+			<img src=\"".IMAGES."logo.png\" style=\"max-width:259px;\" alt=\"".c_APP." Admin\" />
 		</a>
 
 		<div class=\"panel panel-sign\">

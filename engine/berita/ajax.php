@@ -12,7 +12,6 @@
 @include ("../../l0t/render.php");
 require_once(c_THEMES."function.php");
 
-
 //jQuery UI AutoComplete customer
 if(trim(strip_tags($_GET['ac'])) == "customer") {
 	if (!empty($_GET['term'])) {

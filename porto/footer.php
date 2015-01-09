@@ -72,20 +72,20 @@ echo "
 					<ul>
 						<li class=\"status-online\">
 							<figure class=\"profile-picture\">
-								<img src=\"".IMAGES."!sample-user.jpg\" alt=\"Rini\" class=\"img-circle\">
+								<img src=\"".IMAGES."!sample-user.jpg\" alt=\"Bima\" class=\"img-circle\">
 							</figure>
 							<div class=\"profile-info\">
-								<span class=\"name\">Rini</span>
-								<span class=\"title\">Process Order</span>
+								<span class=\"name\">Bima</span>
+								<span class=\"title\">Administrator</span>
 							</div>
 						</li>
 						<li class=\"status-offline\">
 							<figure class=\"profile-picture\">
-								<img src=\"".IMAGES."!sample-user.jpg\" alt=\"Nurul\" class=\"img-circle\">
+								<img src=\"".IMAGES."!sample-user.jpg\" alt=\"Viona\" class=\"img-circle\">
 							</figure>
 							<div class=\"profile-info\">
-								<span class=\"name\">Nurul</span>
-								<span class=\"title\">Management</span>
+								<span class=\"name\">Viona</span>
+								<span class=\"title\">Staff</span>
 							</div>
 						</li>
 					</ul>

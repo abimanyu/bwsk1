@@ -58,16 +58,16 @@ $(document).ready(function(){
 								Reports:
 								<strong>
 									<select class="form-control" id="salesSelector">
-										<option value="Barang Jadi" selected>Barang Jadi</option>
-										<option value="Jumlah Roll" >Jumlah Roll</option>
-										<option value="Jumlah Kg" >Jumlah Kg</option>
+										<option value="Berita" selected>Berita</option>
+										<option value="Artikel" >Artikel</option>
+										<option value="Visitor" >Visitor</option>
 									</select>
 								</strong>
 							</h2>
 
 							<div id="salesSelectorItems" class="chart-data-selector-items mt-sm">
 
-								<div class="chart chart-sm" data-sales-rel="Barang Jadi" id="flotDashSales1" class="chart-active"></div>
+								<div class="chart chart-sm" data-sales-rel="Berita" id="flotDashSales1" class="chart-active"></div>
 								<script>
 
 									var flotDashSales1Data = [{
@@ -86,7 +86,7 @@ $(document).ready(function(){
 
 								</script>
 
-								<div class="chart chart-sm" data-sales-rel="Jumlah Roll" id="flotDashSales2" class="chart-hidden"></div>
+								<div class="chart chart-sm" data-sales-rel="Artikel" id="flotDashSales2" class="chart-hidden"></div>
 								<script>
 
 									var flotDashSales2Data = [{
@@ -105,7 +105,7 @@ $(document).ready(function(){
 
 								</script>
 
-								<div class="chart chart-sm" data-sales-rel="Jumlah Kg" id="flotDashSales3" class="chart-hidden"></div>
+								<div class="chart chart-sm" data-sales-rel="Visitor" id="flotDashSales3" class="chart-hidden"></div>
 								<script>
 
 									var flotDashSales3Data = [{
@@ -127,14 +127,14 @@ $(document).ready(function(){
 						</div>
 					</div>
 					<div class="col-lg-4 text-center">
-						<h2 class="panel-title mt-md">Sales Goal</h2>
+						<h2 class="panel-title mt-md">Target Data</h2>
 						<div class="liquid-meter-wrapper liquid-meter-sm mt-lg">
 							<div class="liquid-meter">
 								<meter min="0" max="100" value="35" id="meterSales"></meter>
 							</div>
 							<div class="liquid-meter-selector" id="meterSalesSel">
-								<a href="#" data-val="35" class="active">Monthly Goal</a>
-								<a href="#" data-val="62">Annual Goal</a>
+								<a href="#" data-val="35" class="active">Bulanan</a>
+								<a href="#" data-val="62">Tahunan</a>
 							</div>
 						</div>
 					</div>
@@ -180,10 +180,10 @@ $(document).ready(function(){
 						</div>
 						<div class="widget-summary-col">
 							<div class="summary">
-								<h4 class="title">Pesanan Barang Jadi</h4>
+								<h4 class="title">Total Berita</h4>
 								<div class="info">
-									<strong class="amount">145 Roll</strong>
-									<span class="text-primary">(102 hari ini)</span>
+									<strong class="amount">145 Judul</strong>
+									<span class="text-primary">(2 hari ini)</span>
 								</div>
 							</div>
 						</div>
@@ -200,10 +200,9 @@ $(document).ready(function(){
 						</div>
 						<div class="widget-summary-col">
 							<div class="summary">
-								<h4 class="title">Pembelian Gray</h4>
+								<h4 class="title">Pages</h4>
 								<div class="info">
-									<strong class="amount">145 Roll</strong>
-									<span class="text-primary">(102 hari ini)</span>
+									<strong class="amount">12 Pages</strong>
 								</div>
 							</div>
 						</div>
@@ -220,9 +219,9 @@ $(document).ready(function(){
 						</div>
 						<div class="widget-summary-col">
 							<div class="summary">
-								<h4 class="title">Permintaan Pencelupan</h4>
+								<h4 class="title">Database</h4>
 								<div class="info">
-									<strong class="amount">145 Roll</strong>
+									<strong class="amount">145 Record</strong>
 									<span class="text-primary">(102 hari ini)</span>
 								</div>
 							</div>
@@ -240,10 +239,9 @@ $(document).ready(function(){
 						</div>
 						<div class="widget-summary-col">
 							<div class="summary">
-								<h4 class="title">Surat Jalan</h4>
+								<h4 class="title">Peta</h4>
 								<div class="info">
-									<strong class="amount">145 SJ</strong>
-									<span class="text-primary">(102 hari ini)</span>
+									<strong class="amount">50 Peta</strong>
 								</div>
 							</div>
 						</div>

@@ -2,7 +2,7 @@
 	
 	'use strict';
 
-	$("#add_kategori").submit(function(event){
+	$("#add_tags").submit(function(event){
 				
 		event.preventDefault();
 		
@@ -10,7 +10,7 @@
 		var stack_bar_bottom = {"dir1": "up", "dir2": "right", "spacing1": 0, "spacing2": 0};
 		
 		$.ajax({
-			url: "ajax.php?ac=add_cat",
+			url: "ajax.php?ac=add_tag",
 			type: "POST",
 			data: values,
 			success: function(response){
@@ -25,7 +25,7 @@
 
 				$("#isi_table").html(response);
 
-				$("#add_kategori")[0].reset();
+				$("#add_tags")[0].reset();
 			}
 		 });
 	});

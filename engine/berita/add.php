@@ -6,7 +6,7 @@
 * @license      http://creativecommons.org/licenses/by-nc/3.0/ CC BY-NC 3.0
 * @copyright    2015
 * @since        File available since 5.0
-* @category     category pages
+* @category     post Berita
 */
 
 @include ("../../l0t/render.php");
@@ -29,8 +29,8 @@ $SCRIPT_FOOT = "
 <script>
 $(document).ready(function(){
 	$('html').addClass('sidebar-left-collapsed');
-	$('nav li.nav-cat').addClass('nav-expanded nav-active');
-	$('nav li.pg').addClass('nav-active');
+	$('nav li.nav1').addClass('nav-expanded nav-active');
+	$('nav li.ba').addClass('nav-active');
 });
 </script>
 <script src=\"custom.js\"></script>
@@ -107,11 +107,11 @@ $LAST_NO_SP = get_option("warehouse", "po-last");
 ?>
 <section role="main" class="content-body">
 <header class="page-header">
-	<h2>Tambah Pages</h2>
+	<h2>Tambah Berita</h2>
 	<div class="right-wrapper pull-right">
 		<ol class="breadcrumbs">
 			<li><a href="<?php echo c_LANDING;?>"><i class="fa fa-home"></i></a></li>
-			<li><a href="./">Pages</a></li>
+			<li><a href="./">Berita</a></li>
 			<li><span>Add</span></li>
 		</ol>
 		<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
@@ -177,7 +177,7 @@ $LAST_NO_SP = get_option("warehouse", "po-last");
 			<div class="panel-actions">
 				<a href="#" class="fa fa-caret-down"></a>
 			</div>
-			<h2 class="panel-title">Atribut Pages</h2>
+			<h2 class="panel-title">Atribut Berita</h2>
 		</header>
 		<div class="panel-body">
 			<div class="form-group">
@@ -186,10 +186,10 @@ $LAST_NO_SP = get_option("warehouse", "po-last");
 					<select name="CPID" id="CPID" class="form-control mb-md">
 						<?php
 						include "cat/cat-function.php";
-			            $sql -> db_Select("PAGE_cat", "PCAT_ID, c_name", "WHERE `c_parent_ID`='0' GROUP BY PCAT_ID");
+			            $sql -> db_Select("taxonomy", "T_ID, c_name", "WHERE `c_parent_ID`='0' AND `type`='1' GROUP BY T_ID");
 			            while($row = $sql-> db_Fetch()){
-			                echo "<option value=\"{$row['PCAT_ID']}\">{$row['c_name']}</option>\n";
-			                SELECT_CHILD($row['PCAT_ID'], 1);
+			                echo "<option value=\"{$row['T_ID']}\">{$row['c_name']}</option>\n";
+			                SELECT_CHILD($row['T_ID'], 1);
 			            }
 			            ?>
 					</select>
@@ -217,7 +217,7 @@ $LAST_NO_SP = get_option("warehouse", "po-last");
 </form>
 	
 <div class="row"><p></p><div class="col-md-12">
-<section class="panel"><a href="./" class="btn btn-default"><i class="fa fa-arrow-left"></i> Kembali ke Pages</a></section>
+<section class="panel"><a href="./" class="btn btn-default"><i class="fa fa-arrow-left"></i> Kembali ke Berita</a></section>
 </div></div>
 
 </section>

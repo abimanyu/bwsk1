@@ -228,21 +228,4 @@ function tanggal($xx) {
     $r = explode("-", $xx);
     return $r[2]."-".$r[1]."-".$r[0];
 }
-/*
- * Get Count
- */
-function get_count($table, $coloumn, $ident=""){
-    global $sql;
-
-    if(empty($ident)) {
-        $sql -> db_Select($table, $coloumn);
-    }
-    else {
-        $sql -> db_Select($table, $coloumn, $ident);
-    }
-
-    if ( $sql->db_Rows() ) { return $sql->db_Rows();}
-    else {return 0;}
-}
-
 ?>
